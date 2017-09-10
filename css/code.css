@@ -1,0 +1,41 @@
+code {
+  font-size: 25px;
+  font-family: 'Consolas'; }
+  code .line {
+    display: block;
+    margin-bottom: 12px; }
+  code .var-declaration {
+    color: #66D9EF;
+    font-style: italic; }
+  code .var-name {
+    color: #FFFFFF; }
+  code .equal {
+    color: #F92672; }
+  code .symbol {
+    color: #FFFFFF; }
+  code .string {
+    color: #E6DB74; }
+  code .text {
+    color: #FFFFFF; }
+  code .html-tag {
+    color: #F92672; }
+  code .html-attr {
+    color: #66D9E1; }
+    code .html-attr-aux {
+      color: #FFFFFF; }
+    code .html-attr-value {
+      color: #FFFFFF; }
+  code .object-key {
+    color: #FFFFFF; }
+  code .object-value {
+    color: #FFFFFF; }
+  code .function {
+    color: #66D9E1; }
+    code .function-aux {
+      color: #FFFFFF; }
+  code .number {
+    color: #F92672; }
+  code .special-symbol {
+    color: #F92672; }
+
+/*# sourceMappingURL=code.css.map */

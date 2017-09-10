@@ -1,0 +1,86 @@
+@import "code";
+
+@font-face {
+    font-family: Consolas;
+    src: url(../resources/fonts/Consolas.ttf);
+}
+
+%slideBase {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #212121;
+
+    .title {
+        font-size: 35px;
+    }
+}
+
+%slideWithTitleBase {
+    code {
+        &:first-child {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        &:last-child {
+            flex: 7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+body, html, #app {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    &-section {
+        width: 100%;
+        height: 100%;
+
+        &[data-slide="1"] {
+            display: flex;
+            overflow: hidden;
+            align-items: flex-end;
+            justify-content: center;
+            background: url(../resources/images/knockoutjs.gif) center center no-repeat;
+            background-size: 100%;
+            
+            .title {
+                color: white;
+                font-size: 70px;
+                padding-top: 10px;
+                background: black;
+                margin-bottom: 50px;
+                font-family: 'Consolas';
+            }
+        }
+
+        &[data-slide="2"] {
+            @extend %slideBase;
+        }
+        
+        &[data-slide="3"] {
+            @extend %slideBase;
+            @extend %slideWithTitleBase;
+        }
+
+        &[data-slide="4"] {
+            @extend %slideBase;
+            @extend %slideWithTitleBase;
+        }
+        
+        &[data-slide="5"] {
+            @extend %slideBase;
+        }
+    }
+}

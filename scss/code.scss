@@ -1,0 +1,80 @@
+code {
+    font-size: 25px;
+    font-family: 'Consolas';
+
+    .line {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .var {
+        &-declaration {
+            color: #66D9EF;
+            font-style: italic;
+        }
+
+        &-name {
+            color: #FFFFFF;
+        }
+    }
+
+    .equal {
+        color: #F92672;
+    }
+
+    .symbol {
+        color: #FFFFFF;
+    }
+
+    .string {
+        color: #E6DB74;
+    }
+
+    .text {
+        color: #FFFFFF;
+    }
+
+    .html {
+        &-tag {
+            color: #F92672;
+        }
+
+        &-attr {
+            color: #66D9E1;
+
+            &-aux {
+                color: #FFFFFF;
+            }
+            
+            &-value {
+                color: #FFFFFF;
+            }
+        }
+    }
+    
+    .object {
+        &-key {
+            color: #FFFFFF;
+        }
+        
+        &-value {
+            color: #FFFFFF;
+        }
+    }
+
+    .function {
+        color: #66D9E1;
+        
+        &-aux {
+            color: #FFFFFF;
+        }
+    }
+    
+    .number {
+        color: #F92672;
+    }
+
+    .special-symbol {
+        color: #F92672;
+    }
+}
