@@ -82,5 +82,25 @@ body, html, #app {
         &[data-slide="5"] {
             @extend %slideBase;
         }
+        
+        &[data-slide="6"] {
+            @extend %slideBase;
+            @extend %slideWithTitleBase;
+            
+            .hadouken {
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                
+                &:not(.active) {
+                    display: none;
+                }
+            }
+        }
+
+        &[data-slide="7"] {
+            background: url(../resources/images/thats-all.gif) center center no-repeat;
+            background-size: 100%;
+        }
     }
 }

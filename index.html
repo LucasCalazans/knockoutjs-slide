@@ -203,11 +203,69 @@
                 <code>
                     <span class="line title">
                         <span class="html-tag" data-bind="text: '<h1>' "></span><!--
-                        --><span class="text" data-bind="text: slide5.title"></span><!--
+                        --><a target="_blank" data-bind="attr: { href: slide5.link }"><!--
+                            --><span class="text" data-bind="text: slide5.title"></span><!--
+                        --></a><!--
                         --><span class="html-tag" data-bind="text: '</h1>' "></span>
                     </span>
                 </code>
             </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 6 -->
+            <section class="slide-section" data-slide="6">
+                <code>
+                    <span class="line title">
+                        <span class="html-tag" data-bind="text: '<h1>' "></span><!--
+                        --><span class="text" data-bind="text: slide6.title"></span><!--
+                        --><span class="html-tag" data-bind="text: '</h1>' "></span>
+                    </span>
+                </code>
+                <img class="hadouken" src="resources/images/hadouken4.gif">
+                <code>
+                    <span class="line">
+                        <span class="text">VM.slide6.hadouken.</span><!--
+                        --><span class="function">subscribe</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="function">function</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="var-name">newValue</span><!--
+                        --><span class="function-aux">)</span>
+                        <span class="symbol">{</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="var-declaration" data-bind="text: general.typeOfVariable"></span>
+                        <span class="var-name">hadouken</span>
+                        <span class="equal">=</span>
+                        <span class="text">document.</span><!--
+                        --><span class="function">getElementsByClassName</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">"hadouken"</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">[</span><!--
+                        --><span class="number">0</span><!--
+                        --><span class="symbol">]</span><!--
+                        --><span class="symbol">;</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="var-name">hadouken</span>
+                        <span class="special-symbol">&&</span>
+                        <span class="text">hadouken.classList.</span><!--
+                        --><span class="function">add</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">"active"</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">;</span>
+                    </span>
+                    <span class="line">
+                        <span class="symbol">}</span>
+                    </span>
+                </code>
+            </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 7 -->
+            <section class="slide-section" data-slide="7"></section>
         <!-- /ko -->
     </div>
 </body>

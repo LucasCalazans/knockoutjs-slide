@@ -6,7 +6,7 @@ define('app', [
     VM = {
         tab: "&nbsp;&nbsp;&nbsp;&nbsp;",
         slideController: {
-            lastSlider: 5,
+            lastSlider: 7,
             currentSlide: ko.observable(1),
         },
         general: {
@@ -41,22 +41,23 @@ define('app', [
             variableName: 'VM.slide4',
             subtotal: ko.observable(200),
             discount: ko.observable(-50),
-            total: null,
-            formatNumber: function(value) {
-
-            }
+            total: null
         },
         slide5: {
             title: ko.observable('Bindings'),
-            variableName: 'VM.slide4',
-            subtotal: ko.observable(200),
-            discount: ko.observable(-50),
-            total: null,
-            formatNumber: function(value) {
-
-            }
+            link: "https://codepen.io/lucascalazans/pen/GvVLBK"
+        },
+        slide6: {
+            title: ko.observable('Subscribe'),
+            variableName: 'VM.slide6',
+            hadouken: ko.observable('')
         },
     }
+
+    VM.slide6.hadouken.subscribe(function(newValue) {
+        var hadouken = document.getElementsByClassName("hadouken")[0];
+        hadouken && hadouken.classList.add("active");
+    });
 
     VM.slide4.total = ko.computed(function() {
         return this.slide4.subtotal() + this.slide4.discount();
