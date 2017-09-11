@@ -52,6 +52,9 @@ define('app', [
             variableName: 'VM.slide6',
             hadouken: ko.observable('')
         },
+        slide7: {
+            title: "That's all folks!"
+        }
     }
 
     VM.slide6.hadouken.subscribe(function(newValue) {
