@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../resources/favicon.png">
+    <title>KnockoutJS</title>
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/styles-v2.css">
+    <script type="application/javascript" src="../js/libs/require.js"></script>
+    <script type="application/javascript" src="../js/config.js"></script>
+    <script type="application/javascript">require(['app-v2'])</script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- ko if: slideController.currentSlide() == 1 -->
+            <section class="slide-section" data-slide="1">
+                <a class="description" target="_blank" href="https://youtu.be/3L5D8by1AtI">
+                    <span>Pabllo Vittar</span>
+                    <span>K.O. (Videoclipe Oficial)</span>
+                </a>
+                <span class="title" data-bind="text: slide1.title"></span>
+            </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 2 -->
+            <section class="slide-section" data-slide="2">
+                <code>
+                    <span class="line">
+                        <span class="var-declaration" data-bind="text: general.typeOfVariable"></span>
+                        <span class="var-name" data-bind="text: slide2.variableName"></span>
+                        <span class="equal">=</span>
+                        <span class="symbol">[</span>
+                    </span>
+                    <!-- ko foreach: slide2.index -->
+                    <span class="line">
+                        <span class="tab" data-bind="html: $parent.tab"></span><!--
+                        --><span class="string" data-bind="text: $parent.slide2.formatedIndexes($data)"></span><!--
+                        --><span class="symbol">,</span>
+                    </span>
+                    <!-- /ko -->
+                    <span class="line">
+                        <span class="symbol">]</span>
+                    </span>
+                </code>
+            </section>
+            <!-- /ko -->
+            <!-- ko if: slideController.currentSlide() == 3 -->
+            <section class="slide-section" data-slide="3">
+                <code>
+                    <span class="line title">
+                        <span class="html-tag" data-bind="text: '<h1>' "></span><!--
+                        --><span class="text" data-bind="text: slide3.title"></span><!--
+                        --><span class="html-tag" data-bind="text: '</h1>' "></span>
+                    </span>
+                </code>
+                <code>
+                    <span class="line">
+                        <span class="var-name" data-bind="text: slide3.variableName"></span>
+                        <span class="equal">=</span>
+                        <span class="symbol">{</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="object-key" data-bind="text: 'title:'"></span>
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">observable</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">"</span><!--
+                        --><span class="string" data-bind="text: slide3.title"></span><!--
+                        --><span class="string">"</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">,</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="object-key" data-bind="text: 'libs:'"></span>
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">observableArray</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="symbol">[</span>
+                        <!-- ko foreach: slide3.libs -->
+                            <span class="line">
+                                <span class="tab" data-bind="html: $parent.tab"></span><!--
+                                --><span class="tab" data-bind="html: $parent.tab"></span><!--
+                                --><span class="string">"</span><!--
+                                --><span class="string" data-bind="text: $data"></span><!--
+                                --><span class="string">"</span><!--
+                                --><span class="symbol" data-bind="if: $parent.slide3.showComma($index)">,</span>
+                            </span>
+                        <!-- /ko -->
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="symbol">]</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">,</span>
+                    </span>
+                    <span class="line">
+                        <span class="symbol">}</span>
+                    </span>
+                    <span class="line">
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">applyBindings</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="var-name">VM</span><!--
+                        --><span class="symbol">,</span>
+                        <span class="object-value">document.</span><!--
+                        --><span class="function">getElementById</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">'app'</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">;</span>
+                    </span>
+                </code>
+            </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 4 -->
+            <section class="slide-section" data-slide="4">
+                <code>
+                    <span class="line title">
+                        <span class="html-tag" data-bind="text: '<h1>' "></span><!--
+                        --><span class="text" data-bind="text: slide4.title"></span><!--
+                        --><span class="html-tag" data-bind="text: '</h1>' "></span>
+                    </span>
+                </code>
+                <code>
+                    <span class="line">
+                        <span class="var-name" data-bind="text: slide4.variableName"></span>
+                        <span class="equal">=</span>
+                        <span class="symbol">{</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="object-key" data-bind="text: 'title:'"></span>
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">observable</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">"</span><!--
+                        --><span class="string" data-bind="text: slide4.title"></span><!--
+                        --><span class="string">"</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">,</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="object-key" data-bind="text: 'subtotal:'"></span>
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">observable</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="number" data-bind="text: slide4.subtotal"></span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">,</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="object-key" data-bind="text: 'discount:'"></span>
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">observable</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="number" data-bind="text: slide4.discount"></span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">,</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="object-key" data-bind="text: 'total:'"></span>
+                        <span class="object-value">ko.</span><!--
+                        --><span class="function">computed</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="function">function</span><!--
+                        --><span class="function-aux">()</span>
+                        <span class="symbol">{</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="special-symbol">return</span>
+                        <span class="text">this.slide4.</span><!--
+                        --><span class="function">subtotal</span><!--
+                        --><span class="function-aux">()</span>
+                        <span class="special-symbol">+</span>
+                        <span class="text">this.slide4.</span><!--
+                        --><span class="function">discount</span><!--
+                        --><span class="function-aux">()</span><!--
+                        --><span class="text">;</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="symbol">}</span><!--
+                        --><span class="function-aux">)</span>
+                    </span>
+                    <span class="line">
+                        <span class="symbol">}</span>
+                    </span>
+                    <span class="line">
+                        <span class="html-tag" data-bind="text: '<span'"></span>
+                        <span class="html-attr">data-bind</span><!--
+                        --><span class="html-attr-aux">=</span><!--
+                        --><span class="string">"text: slide4.total"</span><!--
+                        --><span class="html-tag" data-bind="text: '>'"></span><!--
+                        --><span class="text" data-bind="text: slide4.total"></span><!--
+                        --><span class="html-tag" data-bind="text: '</span>'"></span>
+                    </span>
+                </code>
+            </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 5 -->
+            <section class="slide-section" data-slide="5">
+                <code>
+                    <span class="line title">
+                        <span class="html-tag" data-bind="text: '<h1>' "></span><!--
+                        --><a target="_blank" data-bind="attr: { href: slide5.link }"><!--
+                            --><span class="text" data-bind="text: slide5.title"></span><!--
+                        --></a><!--
+                        --><span class="html-tag" data-bind="text: '</h1>' "></span>
+                    </span>
+                </code>
+            </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 6 -->
+            <section class="slide-section" data-slide="6">
+                <code>
+                    <span class="line title">
+                        <span class="html-tag" data-bind="text: '<h1>' "></span><!--
+                        --><span class="text" data-bind="text: slide6.title"></span><!--
+                        --><span class="html-tag" data-bind="text: '</h1>' "></span>
+                    </span>
+                </code>
+                <img class="hadouken" src="../resources/images/hadouken4.gif">
+                <code>
+                    <span class="line">
+                        <span class="text">VM.slide6.hadouken.</span><!--
+                        --><span class="function">subscribe</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="function">function</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="var-name">newValue</span><!--
+                        --><span class="function-aux">)</span>
+                        <span class="symbol">{</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="var-declaration" data-bind="text: general.typeOfVariable"></span>
+                        <span class="var-name">hadouken</span>
+                        <span class="equal">=</span>
+                        <span class="text">document.</span><!--
+                        --><span class="function">getElementsByClassName</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">"hadouken"</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">[</span><!--
+                        --><span class="number">0</span><!--
+                        --><span class="symbol">]</span><!--
+                        --><span class="symbol">;</span>
+                    </span>
+                    <span class="line">
+                        <span class="tab" data-bind="html: tab"></span><!--
+                        --><span class="var-name">hadouken</span>
+                        <span class="special-symbol">&&</span>
+                        <span class="text">hadouken.classList.</span><!--
+                        --><span class="function">add</span><!--
+                        --><span class="function-aux">(</span><!--
+                        --><span class="string">"active"</span><!--
+                        --><span class="function-aux">)</span><!--
+                        --><span class="symbol">;</span>
+                    </span>
+                    <span class="line">
+                        <span class="symbol">}</span>
+                    </span>
+                </code>
+            </section>
+        <!-- /ko -->
+        <!-- ko if: slideController.currentSlide() == 7 -->
+            <section class="slide-section" data-slide="7"></section>
+        <!-- /ko -->
+    </div>
+</body>
+</html>
