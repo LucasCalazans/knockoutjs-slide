@@ -1,43 +1,3 @@
-code {
-  font-size: 25px;
-  font-family: 'Consolas'; }
-  code .line {
-    display: block;
-    margin-bottom: 12px; }
-  code .var-declaration {
-    color: #66D9EF;
-    font-style: italic; }
-  code .var-name {
-    color: #FFFFFF; }
-  code .equal {
-    color: #F92672; }
-  code .symbol {
-    color: #FFFFFF; }
-  code .string {
-    color: #E6DB74; }
-  code .text {
-    color: #FFFFFF; }
-  code .html-tag {
-    color: #F92672; }
-  code .html-attr {
-    color: #66D9E1; }
-    code .html-attr-aux {
-      color: #FFFFFF; }
-    code .html-attr-value {
-      color: #FFFFFF; }
-  code .object-key {
-    color: #FFFFFF; }
-  code .object-value {
-    color: #FFFFFF; }
-  code .function {
-    color: #66D9E1; }
-    code .function-aux {
-      color: #FFFFFF; }
-  code .number {
-    color: #F92672; }
-  code .special-symbol {
-    color: #F92672; }
-
 @font-face {
   font-family: Consolas;
   src: url(../resources/fonts/Consolas.ttf); }
@@ -73,17 +33,34 @@ body, html, #app {
   .slide-section[data-slide="1"] {
     display: flex;
     overflow: hidden;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    background: url(../resources/images/knockoutjs.gif) center center no-repeat;
-    background-size: 100%; }
+    background: url(../resources/images/pablo.gif) center center no-repeat;
+    background-size: auto 100%; }
+    .slide-section[data-slide="1"] .description {
+      right: 20px;
+      bottom: 20px;
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      font-family: 'Lobster', cursive; }
+      .slide-section[data-slide="1"] .description span {
+        display: block;
+        text-align: right; }
     .slide-section[data-slide="1"] .title {
       color: white;
-      font-size: 70px;
+      font-size: 40px;
+      margin-top: 25px;
       padding-top: 10px;
-      background: black;
       margin-bottom: 50px;
-      font-family: 'Consolas'; }
+      font-family: 'Lobster', cursive; }
+      .slide-section[data-slide="1"] .title:before, .slide-section[data-slide="1"] .title:after {
+        content: "";
+        display: block;
+        margin: 15px auto;
+        width: 100px;
+        height: 1px;
+        background: white; }
   .slide-section[data-slide="6"] .hadouken {
     right: 0;
     bottom: 0;
@@ -94,4 +71,4 @@ body, html, #app {
     background: url(../resources/images/thats-all.gif) center center no-repeat;
     background-size: 100%; }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles-v2.css.map */

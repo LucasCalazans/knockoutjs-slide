@@ -19,10 +19,10 @@ define([
             title: 'Index',
             variableName: 'index',
             index: ko.observableArray([
-                'Observable',
-                'Computed',
-                'Bindings',
-                'Subscribe',
+                'Components',
+                'Extenders',
+                'Custom Bindings',
+                'Others Important Operations',
             ]),
             formatedIndexes: function(item) {
                 return '"' + item + '"';

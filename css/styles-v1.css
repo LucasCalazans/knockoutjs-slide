@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Consolas;
+  src: url(../resources/fonts/Consolas.ttf); }
+.slide-section[data-slide="2"], .slide-section[data-slide="3"], .slide-section[data-slide="4"], .slide-section[data-slide="5"], .slide-section[data-slide="6"] {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #212121; }
+  .slide-section[data-slide="2"] .title, .slide-section[data-slide="3"] .title, .slide-section[data-slide="4"] .title, .slide-section[data-slide="5"] .title, .slide-section[data-slide="6"] .title {
+    font-size: 35px; }
+
+.slide-section[data-slide="3"] code:first-child, .slide-section[data-slide="4"] code:first-child, .slide-section[data-slide="6"] code:first-child {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.slide-section[data-slide="3"] code:last-child, .slide-section[data-slide="4"] code:last-child, .slide-section[data-slide="6"] code:last-child {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+body, html, #app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.slide-section {
+  width: 100%;
+  height: 100%; }
+  .slide-section[data-slide="1"] {
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+    justify-content: center;
+    background: url(../resources/images/knockoutjs.gif) center center no-repeat;
+    background-size: 100%; }
+    .slide-section[data-slide="1"] .title {
+      color: white;
+      font-size: 70px;
+      padding-top: 10px;
+      background: black;
+      margin-bottom: 50px;
+      font-family: 'Consolas'; }
+  .slide-section[data-slide="6"] .hadouken {
+    right: 0;
+    bottom: 0;
+    position: absolute; }
+    .slide-section[data-slide="6"] .hadouken:not(.active) {
+      display: none; }
+  .slide-section[data-slide="7"] {
+    background: url(../resources/images/thats-all.gif) center center no-repeat;
+    background-size: 100%; }
+
+/*# sourceMappingURL=styles-v1.css.map */

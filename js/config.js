@@ -1,7 +1,7 @@
 require.config({
-    baseUrl: 'js',
+    baseUrl: '/js',
     paths: {
-        "text": "libs/requirejs-text",
+        'text': 'libs/requirejs-text',
         'ember': 'libs/ember.min',
         'ko': 'libs/knockout-3.4.2',
         'ko-debug': 'libs/knockout-3.4.2.debug',
@@ -10,5 +10,3 @@ require.config({
         'jquery': 'libs/jquery-3.2.1.min',
     }
 });
-
-require(['app']);
