@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Lobster;
+  src: url(../resources/fonts/Lobster-Regular.ttf); }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../resources/images/knockout - 1.gif") center center no-repeat;
+  background-size: 100% auto; }
+
+.page-title {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  color: #FFFFFF;
+  font: 40px Lobster;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000; }
+
+.toolbar {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font: 25px Lobster;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000; }
+  .toolbar > * {
+    flex: 1;
+    height: 100%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    border-right: 1px solid #FFFFFF; }
+    .toolbar > *:last-child {
+      border-right: none; }
+
+/*# sourceMappingURL=styles.css.map */
