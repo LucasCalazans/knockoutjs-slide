@@ -73,13 +73,17 @@ define([
 
     VM.slideController.currentSlide.subscribe(function(value) {
         VM.isModalOpened(false);
-        VM.modal.firstClass(false);
-        VM.modal.lastClass(false);
 
         let title = (VM['slide'+value] && VM['slide'+value].title) || 'KnockoutJS';
         if(typeof title == 'function') title = title();
         document.title = title;
     });
+
+    VM.isModalOpened.subscribe(function(value) {
+        if(value) return;
+        VM.modal.firstClass(false);
+        VM.modal.lastClass(false);
+    })
 
     document.body.addEventListener("keyup", event => {
         if(event.keyCode == 27 && VM.isModalOpened()) {
