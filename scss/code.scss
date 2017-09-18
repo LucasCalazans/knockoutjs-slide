@@ -62,11 +62,25 @@ code {
         }
     }
 
+    .css {
+        &-key {
+            color: #66D9E1;
+        }
+
+        &-value {
+            color: #E6DB74;
+        }
+    }
+
     .function {
         color: #66D9E1;
         
         &-aux {
             color: #FFFFFF;
+        }
+        
+        &-param {
+            color: #66D9E1;
         }
     }
     
@@ -76,5 +90,17 @@ code {
 
     .special-symbol {
         color: #F92672;
+    }
+
+    .has-click {
+        cursor: pointer;
+    }
+    
+    .has-click:hover {
+        border-bottom: 1px solid currentColor;
+    }
+
+    .comment {
+        color: #93C763;
     }
 }

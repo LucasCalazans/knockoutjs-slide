@@ -29,13 +29,25 @@ code {
     color: #FFFFFF; }
   code .object-value {
     color: #FFFFFF; }
+  code .css-key {
+    color: #66D9E1; }
+  code .css-value {
+    color: #E6DB74; }
   code .function {
     color: #66D9E1; }
     code .function-aux {
       color: #FFFFFF; }
+    code .function-param {
+      color: #66D9E1; }
   code .number {
     color: #F92672; }
   code .special-symbol {
     color: #F92672; }
+  code .has-click {
+    cursor: pointer; }
+  code .has-click:hover {
+    border-bottom: 1px solid currentColor; }
+  code .comment {
+    color: #93C763; }
 
 /*# sourceMappingURL=code.css.map */
